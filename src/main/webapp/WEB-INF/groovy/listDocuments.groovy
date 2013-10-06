@@ -1,7 +1,9 @@
 import findEditor.Document
 
 if (user) {
-    def documents = Document.findAll { author == "${user.email}" }
+
+    // TODO: Filter by user.
+    def documents = Document.findAll()
 
     request['documents'] = documents
 }

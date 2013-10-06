@@ -1,6 +1,7 @@
 package findEditor
 
 import groovyx.gaelyk.datastore.Entity
+import groovyx.gaelyk.datastore.Indexed
 import groovyx.gaelyk.datastore.Key
 import groovyx.gaelyk.datastore.Unindexed
 
@@ -10,9 +11,10 @@ import groovyx.gaelyk.datastore.Unindexed
 @Entity(unindexed = false)
 class Document {
     @Key long id
-    String author // login
-    String docType
-    String blobKey
+    @Indexed String authorId // User ID of author
+    @Indexed String authorEmail // Email of author
+    @Indexed String docType
+    @Indexed String blobKey
     @Unindexed int wordCount
     @Unindexed String subjectMatter
     @Unindexed String fileName

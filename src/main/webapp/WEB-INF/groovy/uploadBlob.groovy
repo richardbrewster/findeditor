@@ -15,7 +15,8 @@ if (blob) {
             wordCount: 0,
             subjectMatter: 'Test Subject',
             docType: "Test Doc type",
-            author: "${user.email}",
+            authorId: "${user.userId}",
+            authorEmail: "${user.email}",
             fileName: "${blob.filename}",
             fileSize: blob.size,
             blobKey: blobKey)

@@ -8,7 +8,8 @@
     <tr>
         <th width="30%">Document</th>
         <th>Size</th>
-        <th>Author</th>
+        <th>Author ID</th>
+        <th>Author Email</th>
         <th>Type</th>
         <th>Subject</th>
     </tr>
@@ -16,7 +17,8 @@
     <tr>
         <td>${document.fileName}</td>
         <td>${document.fileSize}</td>
-        <td align="left">${document.author}</td>
+        <td align="left">${document.authorId}</td>
+        <td align="left">${document.authorEmail}</td>
         <td align="left">${document.docType}</td>
         <td align="left">${document.subjectMatter}</td>
         <td><A href="downloadBlob.groovy?blobKey=${document.blobKey}">Download</A>
